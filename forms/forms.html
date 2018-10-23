@@ -1,0 +1,242 @@
+<div ng-controller="FormsCtrl">
+    <div class="container">
+        <div class="col-md-12 cont">
+            <h2>Owner / Caregiver</h2>
+            <p class="">Please provide the information below as completely as possible. All information is strictly confidential.</p>
+            <form action="" class="form ">
+                <div class="form-group ml-3 mr-3">
+                    <label for="owner">Owner / Caregiver <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.owner" id="owner" placeholder="" name="owner">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="spouse">Partner / Spouse <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.partner" id="spouse" placeholder="" name="spouse">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="address">Street Address  <b><span>*</span></b> </label>
+                    <input type="text" class="form-control"  ng-model="patient.address" id="address" placeholder="" name="address">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="city">City  <b><span>*</span></b>:</label>
+                    <input type="text" class="form-control"  ng-model="patient.city" id="city" placeholder="" name="city">
+                </div>
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="sel1">State  <b><span>*</span></b> </label>
+                    <select class="form-control"  ng-model="patient.state" id="sel1" name="sellist1">
+                        <option>Alabama</option>
+                        <option> Alaska</option>
+                        <option> Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option> Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option> Louisiana</option>
+                        <option> Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts[</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option> Missouri</option>
+                        <option> Montana</option>
+                        <option>Nebraska</option>
+                        <option> Nevada</option>
+                        <option> New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option> North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option> South Carolina</option>
+                        <option> South Dakota</option>
+                        <option> Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option> Virginia</option>
+                        <option>Washington</option>
+                        <option>Wisconsin</option>
+                        <option>West Virginia</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="code">Zip Code  <b><span>*</span></b></label>
+                    <input type="text" class="form-control"  ng-model="patient.zipcode" id="code" placeholder="" name="code">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="homephone">Home Phone  <b><span>*</span></b></label>
+                    <input type="number" class="form-control"  ng-model="patient.homephone" id="homephone" placeholder="" name="homephone">
+                </div>
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="cellphone">Cell Phone <b><span>*</span></b></label>
+                    <input type="number" class="form-control"  ng-model="patient.cellphone" id="cellphone" placeholder="" name="cellphone">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="altphone">Alternate Phone <b><span>*</span></b></label>
+                    <input type="number" class="form-control"   ng-model="patient.altphone" id="altphone" placeholder="" name="altphone">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="license">Driver's License # </label>
+                    <input type="text" class="form-control"  ng-model="patient.license" id="license" placeholder="" name="license">
+                </div>
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="email">Email  <b><span>*</span></b></label>
+                    <input type="email" class="form-control" ng-model="patient.email" id="email" placeholder="" name="email">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="employment">Employment <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.employment" id="employment" placeholder="" name="employment">
+                </div>
+                <h1>Pet Information</h1>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="petname">Pet's Name  <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.petname" id="petname" placeholder="" name="petname">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="species">Species  <b><span>*</span></b></label>
+                    <input type="text" class="form-control"  ng-model="patient.species" id="species" placeholder="" name="species">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="city">Breed  <b><span>*</span></b></label>
+                    <input type="text" class="form-control"  ng-model="patient.breed"  id="breed" placeholder="" name="breed">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="age">Age / Birthdate  <b><span>*</span></b></label>
+                    <input type="date" class="form-control"  ng-model="patient.age"  id="age" placeholder="" name="age">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="gender">Gender  <b><span>*</span></b></label>
+                    <input type="text" class="form-control"  ng-model="patient.gender"  id="gender" placeholder="" name="gender">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="color">Color / Markings </label>
+                    <input type="text" class="form-control"  ng-model="patient.color"  id="color" placeholder="" name="color">
+                </div>
+
+                <h3>Spayed / Neutered? </h3>
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label" for="radio1">
+                        <input type="radio" class="form-check-input"  ng-model="patient.neutered"  id="radio1" name="neutered" value="Yes" checked>Yes
+                    </label>
+                </div>
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label" for="radio2">
+                        <input type="radio" class="form-check-input"  ng-model="patient.neutered"   id="radio2" name="neutered" value="No">No
+                    </label>
+                </div>
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label">
+                        <input type="radio"  ng-model="patient.neutered" name="neutered" class="form-check-input">Unknown
+                    </label>
+                </div>
+                <h3 class="ml-3 mr-3">Are Vaccinations Current? </h3>
+
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label" for="radio1">
+                        <input type="radio" class="form-check-input" ng-model="patient.carrVaccination"  id="radio3" name="carrVaccination" value="Yes" checked>Yes
+                    </label>
+                </div>
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label" for="radio2">
+                        <input type="radio" class="form-check-input"  ng-model="patient.carrVaccination"  id="radio4" name="carrVaccination" value="No">No
+                    </label>
+                </div>
+                <div class="form-check ml-3 mr-3">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="patient.carrVaccination"  name="carrVaccination" class="form-check-input" >Unknown
+                    </label>
+                </div>
+
+                <h3 class="ml-3 mr-3">Referral Information</h3>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="refvet">Referral Veterinarian </label>
+                    <input type="text" class="form-control" ng-model="patient.ref.Veterinarian"  id="refvet" placeholder="" name="refvet">
+                </div>
+
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="clinicname">Clinic Name </label>
+                    <input type="text" class="form-control"  ng-model="patient.ref.Clinicname"  id="clinicname" placeholder="" name="clinicname">
+                </div>
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="phone">Phone <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.ref.ClinicPhone" id="phone" placeholder="" name="phone">
+                </div>
+
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="rays">Do you have X-rays <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.ref.rays" id="rays" placeholder="" name="rays">
+                </div>
+
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="notes">Notes <b><span>*</span></b></label>
+                    <input type="text" class="form-control" ng-model="patient.ref.notes" id="notes" placeholder="" name="notes">
+                </div>
+
+                <h3 class="ml-3 mr-3">Statement Of Ownership</h3>
+                <p class="ml-3 mr-3">By checking below you certify that you are the owner and or agent of the above animal and have the authorization to consent to treatment if and when it is needed.</p>
+
+                <p class="ml-3 mr-3"> Confirmation  <b><span>*</span></b></p>
+                <div class="form-group form-check ml-3 mr-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input"  ng-model="patient.confirmation" type="checkbox" name="i agree">	I Agree
+                    </label>
+                </div>
+                <h3 class="ml-3 mr-3">COMMENTS</h3>
+                <!--<div class="form-group">-->
+                <!--<label for="comment">Comment:</label>-->
+                <!--<textarea class="form-control" rows="7" coll="20" id="comment" name="text"></textarea>-->
+                <!--</div>-->
+                <div class="form-group shadow-textarea ml-3 mr-3">
+                    <label for="exampleFormControlTextarea6">Shadow and placeholder</label>
+                    <textarea class="form-control z-depth-1" ng-model="patient.comment" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                </div>
+
+                <button type="button" ng-click="send()" class="btn btn-primary btn ml-3 mr-3">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

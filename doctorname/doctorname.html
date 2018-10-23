@@ -1,0 +1,122 @@
+<div ng-controller="DoctornameCtrl">
+    <div  class="container">
+        <h1>{{'Dear doctor you have ' + our_pacients.length + ' clinic ancheta of pets'}}</h1>
+        <div class="row bg-secondary mt-2 text-light"   ng-repeat="(index, pacient) in our_pacients">
+                    <div class="col-sm-6">
+                    <p>{{index+1}}</p>
+                    <p><span>Name: </span>{{pacient.name}}</p>
+                    <p><span>Owner / Caregiver: </span>{{pacient.owner}}</p>
+                    <p><span>Partner / Spouse: </span>{{pacient.partner}}</p>
+                    <p><span>Street Address: </span>{{pacient.address}}</p>
+                    <p><span>City: </span> {{pacient.city }}</p>
+                    <p><span>State: </span>{{pacient.state}}</p>
+                    <p><span>Zip Code: </span>{{pacient.zipcode }}</p>
+                    <p><span>Home Phone: </span>{{pacient.homephone}}</p>
+                    <p><span>Cell Phone:  </span>{{pacient.cellphone }}</p>
+                    <p><span>lternate Phone: </span>{{pacient.altphone }}</p>
+                    <p><span>Driver's License: </span>{{pacient.license }}</p>
+                    <p><span>Email: </span> {{pacient.email }}</p>
+                    <p><span>Employment: </span>{{pacient.employment }}</p>
+                    <p><span>Pet's Name: </span>{{pacient.petname }}</p>
+                    <p><span>Species: </span>{{pacient.species}}</p>
+                    <p><span>Breed: </span>{{pacient.breed }}</p>
+                    <p><span>Age / Birthdate: </span>{{pacient.age }}</p>
+                    <p><span>Gender: </span>{{pacient.gender }}</p>
+                    <p><span>Color / Markings: </span>{{pacient.color }}</p>
+                    <p><span>Spayed / Neutered: </span>{{pacient.neutered }}</p>
+                    <p><span>Are Vaccinations Current? </span>{{pacient.carrVaccination }}</p>
+                    <p><span>Referral Veterinarian: </span>{{pacient.ref.Veterinarian}}</p>
+                    <p><span>Clinic Name: </span>{{pacient.ref.Clinicname }}</p>
+                    <p><span>Phone: </span>{{pacient.ref.ClinicPhone }}</p>
+                    <p><span>Do you have X-rays? </span>{{pacient.ref.rays}}</p>
+                    <p><span>Notes: </span>{{pacient.ref.notes}}</p>
+                    <p><span>Confirmation: </span>{{pacient.confirmation}}</p>
+                    <p><span>Comments: </span>{{pacient.comment}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" ng-click="delete(pacient._id,index)" class="btn btn-primary btn ml-3 mr-3">Delete ancheta</button></br></br>
+                        <!-- Button to Open the Modal -->
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="update(pacient._id)">
+                            Update ancheta
+                        </button>
+                        <p><span>Received vaccine: </span>{{pacient.anketa[0].vaccine_name }}</p>
+                        <p><span>Date of received vaccine: </span>{{pacient.anketa[0].vaccine_date }}</p>
+                        <p><span>DName of second vaccine: </span>{{pacient.anketa[0].second_vaccine_name}}</p>
+                        <p><span>Date of second vaccine: </span>{{pacient.second_vaccine_date}}</p>
+                        <p><span>Animal disease: </span>{{pacient.disease}}</p>
+                        <p><span>Prescription of disease: </span>{{pacient.prescription}}</p>
+                    </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form name="myForm" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label for="vaccine_name">Received vaccine: </label>
+                                <input ng-model="animal.vaccine_name" type="text" class="form-control" id="vaccine_name" placeholder="Enter name of vaccine" name="vaccine_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vaccine_date">Date of received vaccine: </label>
+                                <input ng-model="animal.vaccine_date" type="date" class="form-control" id="vaccine_date" placeholder="Enter date of vaccine " name="vaccine_date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="second_vaccine_name">Name of second vaccine: </label>
+                                <input ng-model="animal.second_vaccine_name" type="text" class="form-control" id="second_vaccine_name" placeholder="Enter date of second vaccine " name="second_vaccine_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="second_vaccine_date">Date of second vaccine: </label>
+                                <input ng-model="animal.second_vaccine_date" type="date" class="form-control" id="second_vaccine_date" placeholder="Enter date of second vaccine" name="second_vaccine_date">
+                            </div>
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="disease">Disease of animal: </label>-->
+                                <!--<input ng-model="animal.disease" type="text" class="form-control" id="disease" placeholder="Enter disease of animal" name="disease">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="prescription">Prescription of disease: </label>-->
+                                <!--<input ng-model="animal.prescription" type="text" class="form-control" id="prescription" placeholder="Enter prescription of animal" name="prescription">-->
+                            <!--</div>-->
+
+                            <div class="form-group shadow-textarea ">
+                                <label for="disease">Disease of animal:</label>
+                                <textarea class="form-control z-depth-1" ng-model="animal.disease" id="disease" rows="3" placeholder="Enter disease of animal"></textarea>
+                            </div>
+
+                            <div class="form-group shadow-textarea ">
+                                <label for="prescription">Shadow and placeholder</label>
+                                <textarea class="form-control z-depth-1" ng-model="animal.prescription" id="prescription" rows="3" placeholder="Enter prescription of animal"></textarea>
+                            </div>
+
+
+                            <div id="update">
+                                <button ng-click="yesUpdate()" class="btn btn-warning">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

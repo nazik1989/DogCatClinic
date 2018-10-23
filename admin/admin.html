@@ -1,0 +1,44 @@
+<div ng-controller = "AdminCtrl">
+    <div>Admin Page</div>
+    <div ng-repeat="(index, pacient) in newPacients">
+        <p>{{index}}</p>
+        <p><span>Owner / Caregiver</span>{{pacient.owner}}</p>
+        <p><span>Partner / Spouse </span>{{pacient.partner}}</p>
+        <p><span>Street Address</span>{{pacient.address}}</p>
+        <p><span>City</span> {{pacient.city }}</p>
+        <p><span>State </span>{{pacient.state}}</p>
+        <p><span>Zip Code</span>{{pacient.zipcode }}</p>
+        <p><span>Home Phone</span>{{pacient.homephone}}</p>
+        <p><span>Cell Phone </span>{{pacient.cellphone }}</p>
+        <p><span>lternate Phone </span>{{pacient.altphone }}</p>
+        <p><span>Driver's License </span>{{pacient.license }}</p>
+        <p><span>Email</span> {{pacient.email }}</p>
+        <p><span>Employment </span>{{pacient.employment }}</p>
+        <p><span>Pet's Name </span>{{pacient.petname }}</p>
+        <p><span>Species </span>{{pacient.species}}</p>
+        <p><span>Breed</span>{{pacient.breed }}</p>
+        <p><span>Age / Birthdate</span>{{pacient.age }}</p>
+        <p><span>Gender</span>{{pacient.gender }}</p>
+        <p><span>Color / Markings</span>{{pacient.color }}</p>
+        <p><span>Spayed / Neutered</span>{{pacient.neutered }}</p>
+
+        <p><span>Are Vaccinations Current? </span>{{pacient.carrVaccination }}</p>
+
+        <p><span>Referral Veterinarian </span>{{pacient.ref.Veterinarian}}</p>
+
+
+        <p><span>Clinic Name</span>{{pacient.ref.Clinicname }}</p>
+        <p><span>Phone</span>{{pacient.ref.ClinicPhone }}</p>
+        <p><span>Do you have X-rays</span>{{pacient.ref.rays}}</p>
+
+        <p><span>Notes</span>{{pacient.ref.notes}}</p>
+
+        <p><span>Confirmation</span>{{pacient.confirmation}}</p>
+        <p><span>COMMENTS</span>{{pacient.comment}}</p>
+        <button type="button" ng-click="noAccept(pacient._id)" class="btn btn-primary btn ml-3 mr-3">noAccept</button>
+        <button type="button" ng-click="accept(pacient._id,index)" class="btn btn-primary btn ml-3 mr-3">Accept</button>
+
+    </div>
+
+
+</div>

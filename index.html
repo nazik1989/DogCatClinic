@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Hospital</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body ng-app = "myApp">
+<header>
+
+    <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center">
+            <img src="image/logo.jpg" alt="logo">
+        </div>
+        <div class="d-flex justify-content-center">
+            <h1 style="font-family: cursive;color: #00bfff">Dog &amp; Cat Clinic</h1>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-md   navbar-dark " style="background-color: #00bfff">
+
+        <!-- Links -->
+        <div class="col-md-8">
+            <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#!/home">Home</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link text-white" href="#!/aboutus">About Us</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/doctors">Doctors</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/staff">Staff</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/services">Services</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/boarding">Boarding</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/forms">Forms</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/links">Links</a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link text-white" href="#!/contacts">Contacts</a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="navbar-nav ">
+            <li class="nav-item mr-5">
+            <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-skype" style="font-size:36px"></i> Skype</a>
+        </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-whatsapp" style="font-size:36px"></i> Whatsapp</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-envelope" style="font-size:36px"></i> SMS</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-phone" style="font-size:36px"></i> +37455030312 Phone</a>
+            </li>
+            </ul>
+        </div>
+
+
+
+    </nav>
+    <br>
+
+<div class="container-fluid">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <!--<ul class="carousel-indicators">-->
+            <!--<li data-target="#myCarousel" data-slide-to="0" class="active " ></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="1" ></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="2" ></li>-->
+        <!--</ul>-->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="image" src="image/dogCarusel.jpg" alt="dog" >
+                <div class="carousel-caption buttom" style="margin-left:50%">
+                    <h1 style="color:#00bfff">
+                        We really care about <br class="br-md">
+                        your pet's welfare!
+                    </h1>
+                    <p class="big">
+                        Dog &amp; Cat Clinic is a veterinary hospital <br class="br-md">
+                        with a unique approach to the healthcare of your pet.
+                    </p>
+                </div>
+            </div>
+            <div  class="carousel-item ">
+                <img class="image" src="image/dog3Carusel.jpg" alt="dog2">
+                <div class="carousel-caption buttom" style="margin-left:50%">
+                    <h1 style="color:#00bfff">
+                        We really care about <br class="br-md">
+                        your pet's welfare!
+                    </h1>
+                    <p class="big">
+                        Dog &amp; Cat Clinic is a veterinary hospital <br class="br-md">
+                        with a unique approach to the healthcare of your pet.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="image" src="image/catCarusel.png" alt="cat">
+                <div class="carousel-caption buttom" style="margin-left:50%;">
+                    <h1 style="color:#00bfff">
+                        We really care about <br class="br-md">
+                        your pet's welfare!
+                    </h1>
+                    <p class="big">
+                        Dog &amp; Cat Clinic is a veterinary hospital <br class="br-md">
+                        with a unique approach to the healthcare of your pet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+            <span class="carousel-control-prev-icon" style="background-color:#00bfff"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon" style="background-color:#00bfff"></span>
+        </a>
+    </div>
+
+</div>
+</header>
+
+<div ng-view></div>
+
+<footer class="p-1" style="background-color:#00bfff">
+<div class="col-md-12 row">
+    <div class="col-md-4 text-white">
+        <h3>About Us</h3>
+        <p>Dog & Cat Hospital in Norfolk has always been locally owned and operated and it was originally established in 1937 by Dr. James S. Landis and his father. The hospital has been a staple in the downtown Norfolk community for more than 70 years. </p>
+        <h3>Hours</h3>
+        <p> Mon-Fri: 7:30am – 6:00pm</p>
+        <p>Sat: 7:30am – 11:30am</p>
+        <p>Sun: Closed</p>
+
+    </div>
+    <div class="col-md-4 ">    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12083.564674249892!2d43.838346!3d40.7864067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea64b7ee5515c5de!2z1LPVtdW41oLVtNaA1avVqyDVj9Wl1bLVpdWv1aHVv9W-1aHVr9Wh1bYg1Y_VpdWt1bbVuNWs1bjVo9Wr1aHVttWl1oDVqyDUv9Wl1bbVv9aA1bjVtg!5e0!3m2!1shy!2s!4v1539539484904" height="100%" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4 text-white">
+        <h3>Contact Us</h3>
+        <ul class="navbar-nav ">
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-skype" style="font-size:36px"></i> Skype</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-whatsapp" style="font-size:36px"></i> Whatsapp</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-envelope" style="font-size:36px"></i> SMS</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-white" href="#!/contacts"><i class="fa fa-phone" style="font-size:36px"></i> Phone +37455030312 </a>
+            </li>
+            <li class="nav-item mr-5">
+                238 W. 21st Street
+                Norfolk, VA 23517
+                (757) 622-1788
+            </li>
+
+        </ul>
+        <p></p>
+
+    </div>
+
+</div>
+
+</footer>
+    <script src="app/app.js"></script>
+    <script src="service/names.js"></script>
+    <script src="home/home.js"></script>
+    <script src="aboutus/aboutus.js"></script>
+    <script src="doctors/doctors.js"></script>
+    <script src="staff/staff.js"></script>
+    <script src="services/services.js"></script>
+    <script src="boarding/boarding.js"></script>
+    <script src="forms/forms.js"></script>
+    <script src="links/links.js"></script>
+    <script src="contacts/contacts.js"></script>
+    <script src="admin/admin.js"></script>
+    <script src="doctorname/doctorname.js"></script>
+    <script src="pacient/pacient.js"></script>
+    </body>
+    </html>
